@@ -17,7 +17,11 @@ pipeline {
         sh 'npm install'
       }
     }
-     
+      stage('chai') {
+      steps {
+         sh 'npm install --save-dev chai'
+      }
+    } 
     stage('Test') {
       steps {
          sh 'npm test'
